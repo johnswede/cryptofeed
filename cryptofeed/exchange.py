@@ -182,7 +182,7 @@ class RestExchange:
         if start:
             start = self._datetime_normalize(start)
             if not end:
-                end = dt.utcnow()
+                end = dt.now(timezone.utc)
         if end:
             end = self._datetime_normalize(end)
         if start and start > end:
